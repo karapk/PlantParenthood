@@ -2,7 +2,7 @@
 Plant App for plant needs
 
 
-Adding my line for testing
+Michael B - Collaborater
 
 
 Nate S - Collaborater 
