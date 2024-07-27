@@ -1,3 +1,7 @@
 # PlantParenhood
 Plant App for plant needs
-Nate S
+
+Nate S - Collaborater 
+
+
+Philip Karanja - Collaborater 
