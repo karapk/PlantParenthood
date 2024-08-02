@@ -1,4 +1,3 @@
-// components/JumbotronTemplate.js
 const JumbotronTemplate = () => {
     return (
       <div>
