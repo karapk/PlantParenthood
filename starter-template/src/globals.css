@@ -2,20 +2,6 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
-.navbar .form-inline {
-  display: flex;
-  flex-direction: row;
-  align-items: right;
-}
-
-.navbar .form-inline .form-control {
-  width: auto;
-}
-
-.navbar .form-inline .btn {
-  margin-left: 5px;
-}
-
 body {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -98,5 +84,11 @@ body {
     .featurette-heading {
       margin-top: 7rem;
     }
+  }
+  
+  /* Custom styles for navbar padding */
+  .custom-navbar {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
   
