@@ -1,4 +1,3 @@
-// pages/index.js
 import JumbotronTemplate from '../components/JumbotronTemplate';
 
 export default function Home() {
