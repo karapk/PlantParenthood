@@ -1,4 +1,4 @@
-# PlantParenhood
+# PlantParenthood
 Plant App for plant needs
 
 
