@@ -1,4 +1,4 @@
-const JumbotronTemplate = () => {
+const Layout = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark custom-navbar">
@@ -143,4 +143,4 @@ const JumbotronTemplate = () => {
   );
 };
 
-export default JumbotronTemplate;
+export default Layout;
