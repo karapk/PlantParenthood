@@ -1,9 +1,10 @@
-import JumbotronTemplate from '../components/JumbotronTemplate';
+import Layout from '../components/Layout';
+
 
 export default function Home() {
   return (
     <div>
-      <JumbotronTemplate />
+      <Layout />
     </div>
   );
 }
