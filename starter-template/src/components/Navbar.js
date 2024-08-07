@@ -30,18 +30,18 @@ const Navbar = () => {
                 About Us
               </a>
             </li>
-            {/* <li className="nav-item">
-              <a className="nav-link disabled" href="#">
-                Disabled
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                PlantNet
               </a>
-            </li> */}
-            <li className="nav-item dropdown">
+            </li>
+            {/* <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
                 id="dropdown01"
                 data-toggle="dropdown"
-                aria-haspopup="true"
+                // aria-haspopup="true"
                 aria-expanded="false"
               >
                 Plant Type
@@ -57,7 +57,7 @@ const Navbar = () => {
                   Something else here
                 </a>
               </div>
-            </li>
+            </li> */}
           </ul>
           <form className="form-inline ml-auto">
             <input
