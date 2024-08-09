@@ -73,7 +73,7 @@ body {
   background-size: contain;
   position: relative;
   border-radius: 20px;
-
+  margin-left:40px
 }
 
 .header-contents {
