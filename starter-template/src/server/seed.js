@@ -33,7 +33,7 @@ const plantData =[
 async function main() {
   console.log(`Feed the seed data...`);
   for (const d of plantData) {
-    const toDo = await prisma.plantData.create({
+    const plantList = await prisma.plantData.create({
       data: d,
     });
     console.log(`Created a plant list with id: ${plantList.id}`);
