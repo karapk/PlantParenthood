@@ -63,7 +63,55 @@ body {
     line-height: 1;
     letter-spacing: -.05rem;
   }
-  
+
+  /*HEADER CSS
+  ------------------------
+  */
+.header {
+  height: 34vw;
+  background: url('/header_img.png') no-repeat;
+  background-size: contain;
+  position: relative;
+  border-radius: 20px;
+
+}
+
+.header-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1.5vw;
+  max-width: 50%;
+  bottom: 10%;
+  left: 3vw;
+  animation: fadeIn 3s;
+}
+
+.header-contents h2 {
+  font-weight: 500;
+  color: white;
+  font-size: max(4.5vw, 22px);
+}
+
+.header-contents p {
+  color: white;
+  font-size: 1vw;
+}
+.header-contents button{
+  border: none;
+  color: #747474;
+  font-weight:500;
+  padding: 1vw 2.3vw;
+  background-color:white;
+  font-size:max(1vw,13px);
+  border-radius:50px;
+}
+.header-contents button:hover {
+  background-color: grey; /* Change background color on hover */
+  color: green; /* Change text color on hover */
+}
+
   /* RESPONSIVE CSS
   -------------------------------------------------- */
   
