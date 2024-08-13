@@ -68,6 +68,7 @@ body {
 ------------------------ */
 .header {
   height: 34vw;
+  margin-left:40px;
   background: url('/header_img.png') no-repeat;
   background-size: contain;
   position: relative;
