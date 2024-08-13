@@ -12,7 +12,7 @@
     "db:seed": "prisma db seed"
   },
   "dependencies": {
-    "@prisma/client": "5.16.1",
+    "@prisma/client": "^5.16.1",
     "bootstrap": "^5.3.3",
     "jquery": "^3.7.1",
     "next": "^14.2.5",
