@@ -124,6 +124,7 @@ body {
   position: relative;
   bottom: 0;
   margin-top: 20px; /* Add margin-top to create space between footer and component above */
+  margin-bottom: 0%;
 }
 
 .footer-content {

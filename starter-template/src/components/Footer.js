@@ -11,7 +11,7 @@ function Footer() {
                         <h2>PlantParentHood</h2>
                     </div>
                     <div className="footer-social-des">
-                        <p>At PlantParentHood, we believe in the joy and therapeutic power of plants. Our mission is to guide and support plant parents in nurturing their green friends, providing the best resources and community support.</p>
+                        {/* <p>At PlantParentHood, we believe in the joy and therapeutic power of plants. Our mission is to guide and support plant parents in nurturing their green friends, providing the best resources and community support.</p> */}
                         <div className="footer-social-icons">
                             <Image src={assets.facebook_icon} alt="Facebook" width={24} height={24} />
                             <Image src={assets.twitter_icon} alt="Twitter" width={24} height={24} />
@@ -22,9 +22,9 @@ function Footer() {
                 <div className="footer-content-center">
                     <h2>COMPANY</h2>
                     <ul>
-                        <li>Home</li>
+                        {/* <li>Home</li>
                         <li>About Us</li>
-                        <li>Our Mission</li>
+                        <li>Our Mission</li> */}
                         <li>Privacy Policy</li>
                     </ul>
                 </div>
