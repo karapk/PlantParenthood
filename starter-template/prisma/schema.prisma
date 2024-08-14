@@ -12,7 +12,5 @@ model OutdoorPlants {
     name      String   @unique
     genus     String   @unique
     description String    
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
 }
 

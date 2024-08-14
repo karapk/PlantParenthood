@@ -140,3 +140,8 @@ body {
     padding-right: 1rem;
   }
   
+  /* Outdoor Plant Page Columns */
+  .outdoor-col {
+   width: 30%;
+
+  }
