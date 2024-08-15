@@ -7,10 +7,11 @@ datasource db {
   url      = "file:./dev.db"
 }
 
-model OutdoorPlants {
+model Plants {
     id        Int      @id @default(autoincrement())
     name      String   @unique
     genus     String   @unique
-    description String    
+    description String  
+    isOutdoor   Boolean    
 }
 

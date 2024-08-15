@@ -1,7 +1,7 @@
 import { prisma } from "../server/prisma";
 
 export async function getServerSideProps() {
-  const outsidePlants = await prisma.outdoorPlants.findMany(); 
+  const outsidePlants = await prisma.plants.findMany(); 
   return {
     props: { outsidePlants }, 
   };
@@ -22,7 +22,7 @@ const OutdoorPlants = ({ outsidePlants = []}) => {
         </p>
         
         <div className='item-container'>
-          {outsidePlants.map(item => (
+          {outsidePlants.filter(item => item.isOutdoor).map(item => (
             <div key={item.plants} className='item'>
               <div className="item-names">{item.name}</div>
               <div className="item-names">{item.genus}</div>
