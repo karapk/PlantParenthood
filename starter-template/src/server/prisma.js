@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import process from "next/dist/build/webpack/loaders/resolve-url-loader/lib/postcss";
 
 const globalForPrisma = global;
 
