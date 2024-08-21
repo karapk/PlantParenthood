@@ -8,9 +8,9 @@ datasource db {
 }
 
 model Plants {
-    id        Int      @id @default(autoincrement())
-    name      String   @unique
-    genus     String   @unique
+    id        Int      @id 
+    name      String   
+    genus     String   
     description String  
     isOutdoor   Boolean    
 }
