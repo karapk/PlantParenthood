@@ -9,9 +9,10 @@ datasource db {
 
 model Plants {
     id        Int      @id 
-    name      String   
-    genus     String   
+    name        String   
+    genus       String   
     description String  
-    isOutdoor   Boolean    
+    isOutdoor   Boolean
+        
 }
 

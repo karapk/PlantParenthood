@@ -16,19 +16,19 @@ export default function OutdoorPage({ outsidePlants }) {
   }
   
   return (
-    <div>
+    <>
     {outsidePlants.map((item) => (
       item.isOutdoor && (  // Only render if the plant is outdoor
-        <div key={item.id} className='item'>
-          {/* <div className="item-names">{item.name}</div>
+        <div key={item.isOutdoor} className='item'>
+          <div className="item-names">{item.name}</div>
           <div className="item-names">{item.genus}</div>
-          <div className='item-description'>{item.description}</div> */}
+          <div className='item-description'>{item.description}</div>
           {/* Uncomment and use the following line if you have an image URL */}
           {/* <img src={item.imageUrl} alt={item.itemName} className='item-img' /> */}
         </div>
       )
     ))}
-  </div>
+  </>
 
     
   )}
