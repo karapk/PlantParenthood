@@ -6,4 +6,5 @@ export const assets ={
     linkedin_icon,
     facebook_icon,
     twitter_icon,
+
 }
