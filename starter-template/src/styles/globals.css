@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* GLOBAL STYLES
 -------------------------------------------------- */
 
@@ -160,17 +163,107 @@ hr {
   font-size: 0.9em;
   margin: 0;
 }
+/* LOGIN-POPUP CSS
+------------------------ */
+.login-popup {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100vh; /* Adjusted to make the popup centered within the viewport */
+  background-color: rgba(0, 0, 0, 0.56);
+  display: grid;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+}
 
+.login-popup-container {
+  width: max(23vw, 330px);
+  color: #808080;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px 30px;
+  border-radius: 8px;
+  font-size: 14px;
+  animation: fadeIn 0.5s ease;
+}
+
+.login-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+
+.login-popup-title img {
+  width: 16px;
+  cursor: pointer;
+}
+
+.login-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-popup-inputs input {
+  outline: none;
+  border: 1px solid #c9c9c9;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.login-popup-container button {
+  border: none;
+  padding: 10px;
+  border-radius: 12px;
+  color: white;
+  background-color: #28a745; /* Green button */
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.login-popup-container button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.login-popup-condition {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.login-popup-condition input {
+  margin-top: 5px;
+}
+
+.login-popup p span {
+  color: #28a745;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Optional keyframes for fadeIn animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /* Media Queries for responsiveness */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
     text-align: center;
   }
-
   .footer-content-left,
   .footer-content-center,
   .footer-content-right {
     margin: 10px 0;
   }
 }
+
