@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* GLOBAL STYLES
 -------------------------------------------------- */
 
@@ -254,10 +257,10 @@ hr {
     flex-direction: column;
     text-align: center;
   }
-
   .footer-content-left,
   .footer-content-center,
   .footer-content-right {
     margin: 10px 0;
   }
 }
+
