@@ -2,6 +2,9 @@
 -------------------------------------------------- */
 
 /* Padding below the footer and lighter body text */
+
+/* Import Tailwind CSS */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
