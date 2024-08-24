@@ -10,6 +10,7 @@ const plantData = [
     genus: "Zinnia angustifolia Kunth.",
     description: "Description of Plant1",
     isOutdoor: true,
+    imgURL: "/assets/narrowleafzinnia.jpeg",
   },
   {
     id: parseInt(2),
@@ -17,6 +18,7 @@ const plantData = [
     genus: "Hibiscus syriacus L.",
     description: "Description of Plant2",
     isOutdoor: true,
+    imgURL: "/assets/roseofsharon.jpeg"
   },
   {
     id: parseInt(3),
@@ -24,6 +26,7 @@ const plantData = [
     genus: "Hydrangea macrophylla Ser.",
     description: "Description of Plant3",
     isOutdoor: true,
+    imgURL: "/assets/hydrangea.jpeg"
   },
   {
     id: parseInt(4),
@@ -31,6 +34,7 @@ const plantData = [
     genus: "Hibiscus trionum L.",
     description: "Description of Plant4",
     isOutdoor: true,
+    imgURL: "/assets/flowerofanhour.jpeg",
   },
   {
     id: parseInt(5),
@@ -38,6 +42,7 @@ const plantData = [
     genus: "Achillea Filipendulina Lam.",
     description: "Description of Plant5",
     isOutdoor: true,
+    imgURL: "/assets/fernleafyarrow.jpeg"
   },
 ];
 
