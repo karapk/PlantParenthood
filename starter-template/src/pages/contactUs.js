@@ -10,7 +10,12 @@ const ContactUs = () => {
         <div>
             <h3>Here is where we are located:</h3>
             <p>12 E California Ave, Oklahoma City, OK 73104</p>
-            <img src=".../public/location_img.png" alt="Our Location on a Map"/>
+            <img src="../../public/location_img.png" alt="Our Location on a Map"/>
+        </div>
+        <div>
+          <h3>Put your email here to contact us:</h3>
+          <input type="text" name="email"></input>
+          <button type="submit">Submit</button>
         </div>
       </div>
     );
