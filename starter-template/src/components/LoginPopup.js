@@ -1,6 +1,6 @@
 // components/LoginPopup.js
 import React, { useState } from 'react';
-import { assets } from "@/assets/assets";
+import { assets } from "../../public/assets/assets";
 import { ImCross } from "react-icons/im";
 
 function LoginPopup({ setShowLogin }) {
