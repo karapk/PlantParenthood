@@ -18,7 +18,7 @@ export default function Document() {
 
         {/* <link
           rel="stylesheet"
-          href=".//globals.css"
+          href="/styles/globals.css"
         /> */}
         <script
           src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
