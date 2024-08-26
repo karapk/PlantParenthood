@@ -1,13 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 /* GLOBAL STYLES
 -------------------------------------------------- */
 
 /* Padding below the footer and lighter body text */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 body {
   padding-top: 5rem;
