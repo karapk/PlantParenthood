@@ -1,5 +1,7 @@
+
 import Footer from "./Footer";
 import Navbar from "./Navbar";
+
 
 const Layout = ({ children, setShowLogin }) => {
     return (
@@ -8,7 +10,7 @@ const Layout = ({ children, setShowLogin }) => {
             <main>{children}</main>
             <Footer />
         </div>
-    );
-};
+        
+)};
 
 export default Layout;
