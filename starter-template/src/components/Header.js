@@ -1,4 +1,5 @@
 // components/Header.js
+import Link from 'next/link';
 
 import React from 'react';
 
@@ -10,11 +11,16 @@ const Header = () => {
                 <p>
                     Discover the joy of nurturing your very own indoor garden. Whether you're a seasoned plant parent or just starting, PlantParentHood offers the best tips, tricks, and tools to help your plants thrive. Join our community and grow with us!
                 </p>
-                <div>
-                    <button>Learn more</button> 
-                    <button>Indoor</button> 
-                    <button>Outdoor</button>   
-                </div> 
+                <div style={{ display: 'flex', gap: '10px' }}>
+                    <button>Learn more</button>
+                    <button className="nav-link">
+                    <Link href="/Indoor">Indoor</Link>
+                    </button>
+                    <button className="nav-link">
+                    <Link href="/Outdoor">Outdoor</Link>
+                    </button>
+                </div>
+
             </div>
         </div>
     );
