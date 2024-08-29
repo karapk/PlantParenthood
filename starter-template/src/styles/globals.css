@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+
 /* GENERAL STYLES
 -------------------------------------------------- */
 body {
   color: #5a5a5a;
-  font-family: 'Arial', sans-serif; /* Default body font */
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat for body text */
 }
 
 .custom-navbar {
@@ -90,6 +92,7 @@ body {
 /* HEADER STYLES
 -------------------------------------------------- */
 .header {
+  margin-top: 20px;
   height: 34vw;
   margin-left: 40px;
   background: url('/header_img.png') no-repeat;
@@ -109,6 +112,8 @@ body {
   bottom: 10%;
   left: 3vw;
   animation: fadeIn 3s;
+  font-family: 'Montserrat', sans-serif; /* Use Montserrat for header text */
+
 }
 
 .header-contents h2 {
@@ -191,8 +196,9 @@ body {
 
 .footer-content-center h2,
 .footer-content-right h2 {
-  font-size: 1.4em;
-  margin-bottom: 10px;
+  font-family: 'Lora', serif;
+  font-size: 1.8em;
+  margin-bottom: 15px;
 }
 
 .footer-content-center ul,
