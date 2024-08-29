@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1200 100"
+   preserveAspectRatio="none"
+   version="1.1"
+   id="svg31"
+   sodipodi:docname="tree-vein.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs31" />
+  <sodipodi:namedview
+     id="namedview31"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.4076986"
+     inkscape:cx="493.20957"
+     inkscape:cy="-143.91336"
+     inkscape:window-width="2560"
+     inkscape:window-height="1369"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg31" />
+  <!-- Main vein -->
+  <path
+     d="M0 50 C 100 20, 200 80, 300 50 C 400 20, 500 80, 600 50 C 700 20, 800 80, 900 50 C 1000 20, 1100 80, 1200 50"
+     stroke="green"
+     stroke-width="4"
+     fill="none"
+     id="path1" />
+  <!-- Branches connecting to leaves -->
+  <path
+     d="m 199.34254,56.857567 q 19.75075,-8.383822 29.62612,-20.121173"
+     stroke="#008000"
+     stroke-width="3"
+     fill="none"
+     id="path2" />
+  <path
+     d="M 418.32268,46.027162 C 424.98934,42.693828 426.66667,40.666667 430,36"
+     stroke="#008000"
+     stroke-width="3"
+     fill="none"
+     id="path3"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 617.30615,45.655176 q 8.59201,-4.080721 12.88802,-9.79373"
+     stroke="#008000"
+     stroke-width="3"
+     fill="none"
+     id="path4" />
+  <path
+     d="M 801.44972,56.929689 C 808.11638,53.596356 826.66667,40.666667 830,36"
+     stroke="#008000"
+     stroke-width="3"
+     fill="none"
+     id="path5"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="M 1018.2305,45.9442 C 1024.8972,42.610866 1026.6667,40.666667 1030,36"
+     stroke="#008000"
+     stroke-width="3"
+     fill="none"
+     id="path6"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 165.97952,52.973905 q 10.98543,8.395175 21.97087,20.148419"
+     stroke="#008000"
+     stroke-width="3"
+     fill="none"
+     id="path7" />
+  <path
+     d="m 357.62737,41.508833 q 8.24583,9.111413 16.49165,21.867393"
+     stroke="#008000"
+     stroke-width="3"
+     fill="none"
+     id="path8" />
+  <path
+     d="m 566.98862,56.699064 q 9.3298,6.491824 18.65959,15.580378"
+     stroke="#008000"
+     stroke-width="4.6695"
+     fill="none"
+     id="path9" />
+  <path
+     d="m 765,52 c 3.33333,3.333333 7.86075,6.606498 11.19409,11.273165"
+     stroke="#008000"
+     stroke-width="3"
+     fill="none"
+     id="path10"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="M 960.96182,41.060206 C 964.29515,44.393539 971.66667,59.333333 975,64"
+     stroke="#008000"
+     stroke-width="3"
+     fill="none"
+     id="path11"
+     sodipodi:nodetypes="cc" />
+  <!-- Top Leaves with Details -->
+  <path
+     d="m 227.65051,35.706314 c 5,-8 15,-8 20,0 -5,8 -15,8 -20,0"
+     fill="#008000"
+     id="path12" />
+  <path
+     d="m 428.65016,35.065498 c 5,-8 15,-8 20,0 -5,8 -15,8 -20,0"
+     fill="#008000"
+     id="path13" />
+  <path
+     d="m 628.45815,34.274596 c 5.3304,-7.461576 20.4699,-9.150269 25.8003,-1.688693 -5.3304,7.461576 -20.4699,9.150269 -25.8003,1.688693"
+     fill="#008000"
+     id="path14"
+     style="stroke-width:0.99716"
+     sodipodi:nodetypes="ccc" />
+  <path
+     d="M830 36 C 835 28, 845 28, 850 36 C 845 44, 835 44, 830 36"
+     fill="green"
+     id="path15" />
+  <path
+     d="m 1028.6784,35.265786 c 5,-8 15,-8 20,0 -5,8 -15,8 -20,0"
+     fill="#008000"
+     id="path16" />
+  <!-- Bottom Leaves with Details -->
+  <path
+     d="m 185.59103,74.383359 c 5,8 15,8 20,0 -5,-8 -15,-8 -20,0"
+     fill="#008000"
+     id="path17" />
+  <path
+     d="m 372.72393,64.03671 c 5,8 15,8 20,0 -5,-8 -15,-8 -20,0"
+     fill="#008000"
+     id="path18" />
+  <path
+     d="m 584.03084,73.618209 c 5,8 15,8 20,0 -5,-8 -15,-8 -20,0"
+     fill="#008000"
+     id="path19" />
+  <path
+     d="M775 64 C 780 72, 790 72, 795 64 C 790 56, 780 56, 775 64"
+     fill="green"
+     id="path20" />
+  <path
+     d="m 973.16446,65.0279 c 5,8 15,8 20,0 -5,-8 -15,-8 -20,0"
+     fill="#008000"
+     id="path21" />
+  <!-- Leaf Details (Veins) -->
+  <path
+     d="M 20.615804,44.789142 C 18.146885,41.483617 55.821297,68.449239 65.200477,78.15342"
+     stroke="#008000"
+     stroke-width="3"
+     fill="none"
+     id="path7-0-8"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 62.549347,76.876321 c 5,-8 18.81792,-3.888399 23.81792,4.111601 -5,8 -18.81792,6.531571 -23.81792,-1.468429"
+     fill="#008000"
+     id="path12-3-2-6"
+     sodipodi:nodetypes="ccc" />
+  <path
+     d="M 52.061871,41.088111 C 65.229038,35.498896 78.62864,25.854981 85.21222,18.03008"
+     stroke="#008000"
+     stroke-width="3"
+     fill="none"
+     id="path2-4"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 83.89407,17 c 5,-8 15,-8 20,0 -5,8 -15,8 -20,0"
+     fill="#008000"
+     id="path12-0" />
+  <path
+     d="M 114.56246,44.674726 C 128.1237,38.949692 141.92433,29.071428 148.70494,21.056381"
+     stroke="#008000"
+     stroke-width="3.08133"
+     fill="none"
+     id="path2-4-1"
+     sodipodi:nodetypes="cc" />
+  <path
+     d="m 147.4183,20 c 5,-8 15,-8 20,0 -5,8 -15,8 -20,0"
+     fill="#008000"
+     id="path12-0-9" />
+</svg>
