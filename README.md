@@ -2,11 +2,11 @@
 Plant App for plant needs
 
 
-Adding my line for testing
+Michael B - Collaborator
 
 
-Nate S - Collaborater 
+Nate S - Collaborator 
 
 
-Philip Karanja - Collaborater 
+Philip Karanja - Collaborator 
 
