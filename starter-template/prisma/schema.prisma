@@ -1,15 +1,18 @@
 generator client {
-    provider = "prisma-client-js"
+  provider = "prisma-client-js"
 }
 
 datasource db {
-    provider = "sqlite"
-    url      = "file:./dev.db"
+  provider = "sqlite"
+  url      = "file:./dev.db"
 }
 
-model HelloWorld {
-    id        Int      @id @default(autoincrement())
-    name      String   @unique
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
+model Plants {
+    id        Int      @id 
+    name        String   
+    genus       String   
+    description String  
+    isOutdoor   Boolean
+        
 }
+
