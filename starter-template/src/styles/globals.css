@@ -1,7 +1,21 @@
+
+
+
+/* GLOBAL STYLES
+
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
 
 /* GENERAL STYLES
+
 -------------------------------------------------- */
+
+/* Padding below the footer and lighter body text */
+
+
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+
 body {
   color: #5a5a5a;
   font-family: 'Montserrat', sans-serif; /* Use Montserrat for body text */

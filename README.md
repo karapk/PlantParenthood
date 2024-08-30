@@ -1,12 +1,13 @@
 # PlantParenthood
 Plant App for plant needs
 
+Khoi - Collaborator
 
-Adding my line for testing
-
-
-Nate S - Collaborater 
+Michael B - Collaborator
 
 
-Philip Karanja - Collaborater 
+Nate S - Collaborator 
+
+
+Philip Karanja - Collaborator 
 

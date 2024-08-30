@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import {assets} from "../../public/assets/assets";
+import {assets} from "@/assets/assets";
 
 function Footer() {
     return (
