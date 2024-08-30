@@ -21,7 +21,6 @@ const Header = () => {
                     <Link href="/Outdoor">Outdoor</Link>
                     </button>
 
-                    <button>Outdoor</button>
 
                 </div>
 
