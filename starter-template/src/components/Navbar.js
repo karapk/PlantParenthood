@@ -37,7 +37,7 @@ const Navbar = ({ setShowLogin }) => {
                         </a>
                     </li>
                 </ul>
-                <button onClick={() => setShowLogin(true)}>sign in</button>
+                <button onClick={() => setShowLogin(true)} className = "btn-signin">sign in</button>
             </div>
         </nav>
     );
