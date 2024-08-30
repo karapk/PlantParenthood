@@ -1,9 +1,14 @@
 
+
 /* GLOBAL STYLES
 -------------------------------------------------- */
 
 /* Padding below the footer and lighter body text */
 
+
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
 
 body {
   padding-top: 5rem;
@@ -32,7 +37,7 @@ body {
   position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   gap: 1.5vw;
   max-width: 50%;
   bottom: 10%;
@@ -223,7 +228,7 @@ hr {
 
 .login-popup-condition {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   gap: 8px;
   margin-top: 5px;
 }
