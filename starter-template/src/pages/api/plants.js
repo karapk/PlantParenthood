@@ -31,7 +31,7 @@ export default function handler(req, res) {
                 light: "Can tolerate low light, but grows best in indirect sunlight.",
                 temperature: "Best in temperatures between 60-85°F"
             },
-            image_url: ""
+            image_url: "snakeplants.jpg"
         },
         {
             id: 4,
