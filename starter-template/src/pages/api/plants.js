@@ -9,7 +9,7 @@ export default function handler(req, res) {
                 light: "Thrives in bright to medium indirect light.",
                 temperature: "Keep between 60-80°F"
             },
-            image_url: ""
+            image_url: "monstearadeliciosa.jpeg"
         },
         {
             id: 2,
@@ -20,7 +20,7 @@ export default function handler(req, res) {
                 light: "Prefers bright, indirect light.",
                 temperature: "Maintain between 65-75°F"
             },
-            image_url: ""
+            image_url: "figleaf.jpg"
         },
         {
             id: 3,
@@ -42,7 +42,7 @@ export default function handler(req, res) {
                 light: "Prefers partial to full shade.",
                 temperature: "Hardy in zones 4-9"
             },
-            image_url: ""
+            image_url: "EnglishIvy.jpg"
         },
         {
             id: 5,
@@ -53,7 +53,7 @@ export default function handler(req, res) {
                 light: "Needs full sun to thrive.",
                 temperature: "Grows best in temperatures between 55-80°F"
             },
-            image_url: ""
+            image_url: "rosemary.jpeg"
         },
         {
             id: 6,
@@ -64,7 +64,7 @@ export default function handler(req, res) {
                 light: "Prefers bright, indirect sunlight.",
                 temperature: "Keep between 55-80°F"
             },
-            image_url: ""
+            image_url: "aloevera.jpg"
         },
         {
             id: 7,
@@ -75,7 +75,7 @@ export default function handler(req, res) {
                 light: "Requires full sun for at least 6 hours a day.",
                 temperature: "Best in temperatures between 60-75°F"
             },
-            image_url: ""
+            image_url: "Lavender.jpg"
         },
         {
             id: 8,
@@ -86,7 +86,7 @@ export default function handler(req, res) {
                 light: "Thrives in low to medium light.",
                 temperature: "Best kept between 65-80°F"
             },
-            image_url: ""
+            image_url: "peacelilly.jpg"
         },
         {
             id: 9,
@@ -108,7 +108,7 @@ export default function handler(req, res) {
                 light: "Prefers morning sun and afternoon shade.",
                 temperature: "Grows best in zones 3-7"
             },
-            image_url: ""
+            image_url: "hydrangea.jpg"
         },
         {
             id: 11,
@@ -130,7 +130,7 @@ export default function handler(req, res) {
                 light: "Needs full sun for at least 6 hours a day.",
                 temperature: "Best in temperatures between 60-85°F"
             },
-            image_url: ""
+            image_url: "basil.jpg"
         },
         {
             id: 13,
@@ -141,7 +141,7 @@ export default function handler(req, res) {
                 light: "Prefers indirect sunlight or partial shade.",
                 temperature: "Keep between 60-75°F"
             },
-            image_url: ""
+            image_url: "fern.jpg"
         },
         {
             id: 14,
@@ -152,7 +152,7 @@ export default function handler(req, res) {
                 light: "Needs bright, indirect light.",
                 temperature: "Best in temperatures between 60-80°F"
             },
-            image_url: ""
+            image_url: "succulent.jpg"
         },
         {
             id: 15,
@@ -163,7 +163,7 @@ export default function handler(req, res) {
                 light: "Prefers partial shade to full sun.",
                 temperature: "Best in temperatures between 55-70°F"
             },
-            image_url: ""
+            image_url: "mint.jpg"
         },
         {
             id: 16,
@@ -174,7 +174,7 @@ export default function handler(req, res) {
                 light: "Prefers bright, indirect light.",
                 temperature: "Best in temperatures between 60-75°F"
             },
-            image_url: ""
+            image_url: "orchid.jpg"
         },
         {
             id: 17,
@@ -185,7 +185,7 @@ export default function handler(req, res) {
                 light: "Thrives in bright, indirect sunlight.",
                 temperature: "Best in temperatures between 65-75°F"
             },
-            image_url: ""
+            image_url: "jadeplant.jpg"
         },
         {
             id: 18,
@@ -196,7 +196,7 @@ export default function handler(req, res) {
                 light: "Requires full sun to bloom.",
                 temperature: "Best in temperatures between 65-95°F"
             },
-            image_url: ""
+            image_url: "bougainvillea.jpg"
         },
         {
             id: 19,
@@ -207,7 +207,7 @@ export default function handler(req, res) {
                 light: "Prefers bright, indirect light.",
                 temperature: "Keep between 60-75°F"
             },
-            image_url: ""
+            image_url: "rubberplant.jpg"
         },
         {
             id: 20,
@@ -218,7 +218,7 @@ export default function handler(req, res) {
                 light: "Needs full sun to thrive.",
                 temperature: "Grows best in temperatures between 60-75°F"
             },
-            image_url: ""
+            image_url: "thyme.jpg"
         }
     ];
 
