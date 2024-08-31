@@ -1,12 +1,12 @@
-// components/Navbar.js
 import Link from 'next/link';
 
-const Navbar = ({ setShowLogin }) => {
+const Navbar = ({ setShowLogin, user }) => { // Accept `user` as a prop
+
     return (
         <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark custom-navbar">
-            <a className="navbar-brand" href="#">
+           <Link className="navbar-brand nav-link" href="/">
                 PlantParentHood
-            </a>
+            </Link>
             <button
                 className="navbar-toggler"
                 type="button"
@@ -32,12 +32,16 @@ const Navbar = ({ setShowLogin }) => {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">
+                    <Link className="nav-link" href="/plantnet">
                             PlantNet
-                        </a>
+                        </Link>
                     </li>
                 </ul>
-                <button onClick={() => setShowLogin(true)} className = "btn-signin">sign in</button>
+                {user ? ( // Check if the user is logged in
+                    <span className="navbar-text">Welcome, {user.name || user.email}</span>
+                ) : (
+                    <button onClick={() => setShowLogin(true)} className="btn-signin">Sign In</button>
+                )}
             </div>
         </nav>
     );
