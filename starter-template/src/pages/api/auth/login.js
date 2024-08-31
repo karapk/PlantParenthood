@@ -2,6 +2,7 @@ import prisma from '@/server/prisma';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
+
 const JWT_SECRET = "550250";  // Hardcoded secret key
 
 export default async function handler(req, res) {
