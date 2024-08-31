@@ -13,14 +13,14 @@ const Header = () => {
                 </p>
                 <div style={{ display: 'flex', gap: '10px' }}>
                     <button className="nav-link">
-                    <Link href="/contactUs">Contact Us</Link>
+                    <Link className='link-success' href="/contactUs">Contact Us</Link>
                     </button>
                     <button className="nav-link">
-                    <Link href="/Indoor">Indoor</Link>
+                    <Link className='link-success' href="/Indoor">Indoor</Link>
                     </button>
 
                     <button className="nav-link">
-                    <Link href="/Outdoor">Outdoor</Link>
+                    <Link className='link-success' href="/Outdoor">Outdoor</Link>
                     </button>
 
 
