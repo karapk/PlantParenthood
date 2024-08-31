@@ -11,7 +11,7 @@ const Header = () => {
                     Discover the joy of nurturing your very own indoor garden. Whether you're a seasoned plant parent or just starting, PlantParentHood offers the best tips, tricks, and tools to help your plants thrive. Join our community and grow with us!
                 </p>
                 <div>
-                    <button>Learn more</button> 
+                    <button>Contact US</button> 
                     <button>Indoor</button> 
                     <button>Outdoor</button>   
                 </div> 
