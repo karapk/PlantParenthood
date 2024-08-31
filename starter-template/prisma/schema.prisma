@@ -8,12 +8,19 @@ datasource db {
 }
 
 model Plants {
-    id        Int      @id 
-    name        String   
-    genus       String   
-    description String  
-    isOutdoor   Boolean
-    imgURL String @default("placeholder.jpg")
-        
+  id          Int     @id @default(autoincrement())
+  name        String
+  genus       String
+  description String
+  isOutdoor   Boolean
+  imgURL      String  @default("placeholder.jpg")
 }
 
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  name      String?
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
