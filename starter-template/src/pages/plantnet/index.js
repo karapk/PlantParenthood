@@ -1,3 +1,5 @@
+// /pages/plantnet.js
+
 import { useEffect, useState } from 'react';
 
 export default function Plantnet() {
@@ -7,7 +9,9 @@ export default function Plantnet() {
   useEffect(() => {
     async function fetchPlants() {
       try {
-        const response = await fetch('/api/plantnet');
+        // Adjust maxResults as needed
+        const maxResults = 10;
+        const response = await fetch(`/api/plantnet?max=${maxResults}`);
         if (!response.ok) throw new Error('Failed to fetch plants');
         const data = await response.json();
         setPlants(data);
@@ -28,8 +32,10 @@ export default function Plantnet() {
           {plants.map((plant) => (
             <div key={plant.id} className="plant-card">
               <img src={plant.image_url} alt={plant.common_name} />
-              <h2>{plant.common_name || 'Unknown Plant'}</h2>
-              <p>Scientific Name: {plant.scientific_name}</p>
+              <div className="plant-card-content">
+                <h2>{plant.common_name || 'Unknown Plant'}</h2>
+                <p>Scientific Name: {plant.scientific_name}</p>
+              </div>
             </div>
           ))}
         </div>

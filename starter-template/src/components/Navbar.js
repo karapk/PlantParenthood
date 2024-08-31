@@ -31,6 +31,9 @@ const Navbar = ({ setShowLogin }) => {
                         </Link>
                     </li>
                     <li className="nav-item">
+                    <Link className="nav-link" href="/plantnet">
+                            PlantNet
+                        </Link>
                     </li>
                 </ul>
                 <button onClick={() => setShowLogin(true)} className = "btn-signin">sign in</button>
