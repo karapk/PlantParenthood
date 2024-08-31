@@ -9,12 +9,13 @@ const SearchBar = () => {
         if (!query) return;
 
         try {
-            const response = await axios.get(`/api/searchPlants`, {
-                params: { query }
-            });
-            setResults(response.data);
+            const response = await axios.get('/api/plants');
+            const filteredResults = response.data.filter((plant) =>
+                plant.name.toLowerCase().includes(query.toLowerCase())
+            );
+            setResults(filteredResults);
         } catch (error) {
-            console.error("Failed to fetch plants:", error);
+            console.error('Failed to fetch plants:', error);
         }
     };
 
@@ -35,15 +36,23 @@ const SearchBar = () => {
 
             <div className="search-results">
                 {results.length > 0 ? (
-                    results.map((plant) => (
-                        <div key={plant.id} className="plant-card">
-                            <img src={plant.image_url} alt={plant.common_name} />
-                            <h3>{plant.common_name}</h3>
-                            <p>{plant.scientific_name}</p>
-                        </div>
-                    ))
+                    <div className="card-grid">
+                        {results.map((plant) => (
+                            <div key={plant.id} className="plant-card-horizontal">
+                                <img src={plant.image_url} alt={plant.name} className="plant-image-horizontal" />
+                                <div className="plant-details-horizontal">
+                                    <h3>{plant.name}</h3>
+                                    <p>Type: {plant.type}</p>
+                                    <p><strong>Care Instructions:</strong></p>
+                                    <p>Watering: {plant.care.watering}</p>
+                                    <p>Light: {plant.care.light}</p>
+                                    <p>Temperature: {plant.care.temperature}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 ) : (
-                    <p></p>
+                    <p>No results found</p>
                 )}
             </div>
         </div>
