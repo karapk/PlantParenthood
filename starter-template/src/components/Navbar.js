@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Navbar = ({ setShowLogin }) => {
     return (
         <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark custom-navbar">
-            <a className="navbar-brand" href="">
+            <a className="navbar-brand" href="/">
                 PlantParentHood
             </a>
             <button

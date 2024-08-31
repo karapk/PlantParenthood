@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const contactUs = () => {
+const ContactUs = () => {
   const [formStatus, setFormStatus] = useState('');
 
   const handleSubmit = async (event) => {
@@ -60,4 +60,4 @@ const contactUs = () => {
   );
 };
 
-export default contactUs;
+export default ContactUs;
