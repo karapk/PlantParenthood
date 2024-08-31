@@ -6,11 +6,12 @@ import LoginPopup from '../components/LoginPopup';
 
 function MyApp({ Component, pageProps }) {
     const [showLogin, setShowLogin] = useState(false);
-    
+    const [user, setUser] = useState(null); // Manage user state here
+
     return (
         <>
-            {showLogin && <LoginPopup setShowLogin={setShowLogin} />}
-            <Layout setShowLogin={setShowLogin}>
+            {showLogin && <LoginPopup setShowLogin={setShowLogin} setUser={setUser} />}  {/* Pass setUser */}
+            <Layout setShowLogin={setShowLogin} user={user}> {/* Pass user and setShowLogin */}
                 <Component {...pageProps} />
             </Layout>
         </>

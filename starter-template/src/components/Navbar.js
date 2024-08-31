@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
-const Navbar = ({ setShowLogin }) => {
+const Navbar = ({ setShowLogin, user }) => { // Accept `user` as a prop
+
     return (
         <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark custom-navbar">
            <Link className="navbar-brand nav-link" href="/">
@@ -36,7 +37,11 @@ const Navbar = ({ setShowLogin }) => {
                         </Link>
                     </li>
                 </ul>
-                <button onClick={() => setShowLogin(true)} className = "btn-signin">sign in</button>
+                {user ? ( // Check if the user is logged in
+                    <span className="navbar-text">Welcome, {user.name || user.email}</span>
+                ) : (
+                    <button onClick={() => setShowLogin(true)} className="btn-signin">Sign In</button>
+                )}
             </div>
         </nav>
     );
