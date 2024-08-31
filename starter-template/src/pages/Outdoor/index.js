@@ -25,7 +25,7 @@ export default function OutdoorPage({ outsidePlants }) {
   <div style={{marginTop:'100px'}}>
     <h1 className="text-3xl font-bold underline text-center">Outdoor Plants</h1>
     <p className="text-center" style={{width:'118rem'}}>
-    Outdoor plants are a vital part of any garden or landscape, bringing life, color, and natural beauty to outdoor spaces. They range from vibrant flowers and lush shrubs to towering trees and delicate ground covers, each contributing to the ecosystem while enhancing the visual appeal of your environment. Outdoor plants not only improve air quality and provide habitats for wildlife but also offer a sense of tranquility and connection to nature. Whether you&apos;re cultivating a small balcony garden or a sprawling backyard, choosing the right outdoor plants can transform your space into a personal oasis. Below are examples of outdoor plants that when they bloom add color and texture to any environment they are in.</p>
+    Outdoor plants are a vital part of any garden or landscape, bringing life, color, and natural beauty to outdoor spaces. They range from vibrant flowers and lush shrubs to towering trees and delicate ground covers, each contributing to the ecosystem while enhancing the visual appeal of your environment. Outdoor plants not only improve air quality and provide habitats for wildlife but also offer a sense of tranquility and connection to nature. Whether you&apos;re cultivating a small balcony garden or a sprawling backyard, choosing the right outdoor plants can transform your space into a personal oasis. Below are examples of outdoor plants that when they bloom add color and texture to any environment they are in.&apos;</p>
   </div>
   
 
