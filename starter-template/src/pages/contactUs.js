@@ -1,19 +1,63 @@
-const ContactUs = () => {
-    return (
-      <div>
-        <h1>Contact Us</h1>
-        <div>
-            <h3>Here is where you can contact us:</h3>
-            <p>1-800-PLANT-LOVE</p>
-            <p>Support@Plantparenthood.com</p>
-        </div>
-        <div>
-            <h3>Here is where we are located:</h3>
-            <p>12 E California Ave, Oklahoma City, OK 73104</p>
-            <img src=".../public/location_img.png" alt="Our Location on a Map"/>
-        </div>
+import React, { useState } from 'react';
+
+const contactUs = () => {
+  const [formStatus, setFormStatus] = useState('');
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // Get form data
+    const data = {
+      name: event.target.name.value,
+      email: event.target.email.value,
+      message: event.target.message.value,
+    };
+
+    try {
+      // Send form data to the API endpoint
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setFormStatus('Thank you for your message! We will get back to you soon.');
+        event.target.reset(); 
+      } else {
+        setFormStatus('Something went wrong. Please try again later.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setFormStatus('Something went wrong. Please try again later.');
+    }
+  };
+
+  return (
+    <div className="contact-container">
+      <div className="form-container">
+        <h2>Contact Us</h2>
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" className="submit-button">Send Message</button>
+        </form>
+        {formStatus && <p className="form-status">{formStatus}</p>}
       </div>
-    );
-  }
-  
-  export default ContactUs;
+    </div>
+  );
+};
+
+export default contactUs;

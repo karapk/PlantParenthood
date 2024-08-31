@@ -12,7 +12,9 @@ const Header = () => {
                     Discover the joy of nurturing your very own indoor garden. Whether you are a seasoned plant parent or just starting, PlantParentHood offers the best tips, tricks, and tools to help your plants thrive. Join our community and grow with us!
                 </p>
                 <div style={{ display: 'flex', gap: '10px' }}>
-                    <button>Learn more</button>
+                    <button className="nav-link">
+                    <Link href="/contactUs">Contact Us</Link>
+                    </button>
                     <button className="nav-link">
                     <Link href="/Indoor">Indoor</Link>
                     </button>
