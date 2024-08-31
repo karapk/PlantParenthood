@@ -23,17 +23,17 @@ export default function Document() {
         <script
           src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
           integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-          crossOrigin="anonymous"
+          crossOrigin="anonymous" async
         ></script>
         <script
           src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
           integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGaU5Tw6Wc4GIy76P1Lt8JH2xr"
-          crossOrigin="anonymous"
+          crossOrigin="anonymous" async
         ></script>
         <script
           src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
           integrity="sha384-ChfqqxuZUCnJSK3+djyKjLhcHYiirfHf+L6M5RQjtiYYfRRaIdRdftMUI8dCqldw"
-          crossOrigin="anonymous"
+          crossOrigin="anonymous" async
         ></script>
       </Head>
       <body>
