@@ -1,4 +1,4 @@
-import { Prisma } from "../../server/prisma";
+import prisma from "../../server/prisma";
 import 'bootstrap/dist/css/bootstrap.css';
 
 
