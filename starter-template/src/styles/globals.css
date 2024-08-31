@@ -460,6 +460,130 @@ hr {
 .plant-details-horizontal p {
   margin: 5px 0;
 }
+/*AboutUS*/
+.about-us-container {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-us-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.about-us-subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #34495e;
+}
+
+.about-us-mission {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.mission-image-container {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.mission-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.mission-text-container {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.mission-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #27ae60;
+}
+
+.mission-text {
+  font-size: 1.1rem;
+  color: #34495e;
+}
+
+.about-us-features {
+  margin-bottom: 40px;
+}
+
+.features-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #27ae60;
+  text-align: center;
+}
+
+.features-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.feature {
+  flex: 1;
+  text-align: center;
+}
+
+.feature-image {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  color: #2980b9;
+}
+
+.feature-text {
+  font-size: 1rem;
+  color: #34495e;
+}
+
+.about-us-team {
+  margin-bottom: 40px;
+}
+
+.team-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #27ae60;
+  text-align: center;
+}
+
+.team-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-image {
+  width: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.team-name {
+  font-size: 1.5rem;
+  color: #2980b9;
+}
+
+.team-role {
+  font-size: 1rem;
+  color: #34495e;
+}
 
 /* ANIMATIONS
 -------------------------------------------------- */
