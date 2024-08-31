@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Navbar = ({ setShowLogin }) => {
     return (
         <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark custom-navbar">
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="">
                 PlantParentHood
             </a>
             <button
@@ -32,9 +32,6 @@ const Navbar = ({ setShowLogin }) => {
                         </Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">
-                            PlantNet
-                        </a>
                     </li>
                 </ul>
                 <button onClick={() => setShowLogin(true)} className = "btn-signin">sign in</button>
