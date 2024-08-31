@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import axios from 'axios';
-
+import Image from 'next/image';
 const SearchBar = () => {
     const [query, setQuery] = useState('');
     const [results, setResults] = useState([]);
@@ -39,7 +39,7 @@ const SearchBar = () => {
                     <div className="card-grid">
                         {results.map((plant) => (
                             <div key={plant.id} className="plant-card-horizontal">
-                                <img src={plant.image_url} alt={plant.name} className="plant-image-horizontal" />
+                                <Image src={plant.image_url} alt={plant.name} className="plant-image-horizontal"/>
                                 <div className="plant-details-horizontal">
                                     <h3>{plant.name}</h3>
                                     <p>Type: {plant.type}</p>
