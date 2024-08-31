@@ -1,5 +1,3 @@
-import {assets} from "@/assets/assets";
-
 export default function handler(req, res) {
     const plants = [
         {
