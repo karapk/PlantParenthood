@@ -1,10 +1,10 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
-const Layout = ({ children, setShowLogin, user }) => {  // Accept `user` as a prop
+const Layout = ({ children, setShowLogin, user }) => {  
     return (
         <div>
-            <Navbar setShowLogin={setShowLogin} user={user} />  {/* Pass `user` to Navbar */}
+            <Navbar setShowLogin={setShowLogin} user={user} /> 
             <main>{children}</main>
             <Footer />
         </div>
