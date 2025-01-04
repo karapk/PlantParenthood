@@ -1,7 +1,9 @@
+import Image from 'next/image';
+
 export default function Indoor() {
   return (
   <div className="card" style={{width: "18rem"}}>
-    <img className="card-img-top" alt="Card image cap"/>
+    <Image className="card-img-top" alt="Card image cap" src="/path/to/image.jpg" width={288} height={162} />
     <div className="card-body">
       <h5 className="card-title">Card title</h5>
       <p className="card-text">Some of the content.</p>
