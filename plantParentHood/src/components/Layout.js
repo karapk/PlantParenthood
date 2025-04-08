@@ -1,10 +1,10 @@
 import Footer from "./Footer";
-import Navbar from "./Navbar";
+import {Navigationbar} from "./NavigationBar";
 
 const Layout = ({ children, setShowLogin, user }) => {  
     return (
         <div>
-            <Navbar setShowLogin={setShowLogin} user={user} /> 
+            <Navigationbar setShowLogin={setShowLogin} user={user} /> 
             <main>{children}</main>
             <Footer />
         </div>
