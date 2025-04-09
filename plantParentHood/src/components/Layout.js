@@ -13,8 +13,8 @@ const Layout = ({ children, setShowLogin, userName }) => {
                 <footer>
                     <center>
                         {accounts.length > 0
-                            ? `You are logged in as ${accounts[0].username}`
-                            : "You are logged in"}
+                            ? `You are logged in as ${accounts[0].name}`
+                            : "Hello Guest!"}
                     </center>
                 </footer>
             </AuthenticatedTemplate>
