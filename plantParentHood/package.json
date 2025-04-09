@@ -13,8 +13,8 @@
     "prisma:generate": "prisma generate"
   },
   "dependencies": {
-    "@azure/msal-browser": "^4.8.0",
-    "@azure/msal-react": "^3.0.7",
+    "@azure/msal-browser": "^2.39.0",
+    "@azure/msal-react": "^1.5.13",
     "@prisma/client": "^5.19.0",
     "axios": "^1.7.5",
     "bcrypt": "^5.1.1",

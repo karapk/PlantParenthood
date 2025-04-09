@@ -10,6 +10,7 @@ export const Navigationbar = () => { // Accept `user` as a prop
     let activeAccount;
 
     if(instance) {
+        console.log("Setting Active Account:", instance.getActiveAccount() );
         activeAccount = instance.getActiveAccount();
     }
 
