@@ -3,8 +3,8 @@ import '../styles/globals.css';
 import { MsalProvider, useMsal } from '@azure/msal-react';
 import { PublicClientApplication, EventType } from '@azure/msal-browser';
 import { msalConfig, b2cPolicies } from '../authConfig';
-import { compareIssuingPolicy } from '../utils/claimUtils';
 import Layout from '../components/Layout';
+
 
 const msalInstance = new PublicClientApplication(msalConfig);
 
@@ -14,52 +14,32 @@ const Pages = () => {
     useEffect(() => {
         const callbackId = instance.addEventCallback((event) => {
             console.log('MSAL Event:', event);
-            console.log('MSAL Event Payload:', event.eventType);
             if (
                 (event.eventType === EventType.LOGIN_SUCCESS || event.eventType === EventType.ACQUIRE_TOKEN_SUCCESS) &&
                 event.payload.account
             ) {
-                {
-                    console.log("Setting Active Account:", event.payload.account);
-                    instance.setActiveAccount(event.payload.account); // Set the active account
-                }
-                // Handle profile edit flow
-                if (event.payload.idTokenClaims['tfp'] === b2cPolicies.names.editProfile) {
-                    // const originalSignInAccount = instance
-                    //     .getAllAccounts()
-                    //     .find(
-                    //         (account) =>
-                    //             account.idTokenClaims.oid === event.payload.idTokenClaims.oid &&
-                    //             account.idTokenClaims.sub === event.payload.idTokenClaims.sub &&
-                    //             account.idTokenClaims['tfp'] === b2cPolicies.names.signUpSignIn
-                    //     );
+                instance.setActiveAccount(event.payload.account);
 
+                if (event.payload.idTokenClaims['tfp'] === b2cPolicies.names.editProfile) {
                     const signUpSignInFlowRequest = {
                         authority: b2cPolicies.authorities.signUpSignIn.authority,
-                        account: originalSignInAccount,
+                        account: instance.getActiveAccount(),
                     };
 
-                    instance.ssoSilent(signUpSignInFlowRequest);
+                    instance.ssoSilent(signUpSignInFlowRequest).catch((error) => {
+                        console.error('SSO Silent Error:', error);
+                    });
                 }
 
-                // Handle forgot password flow
-                // if (compareIssuingPolicy(event.payload.idTokenClaims, b2cPolicies.names.forgotPassword)) {
-                //     const signUpSignInFlowRequest = {
-                //         authority: b2cPolicies.authorities.signUpSignIn.authority,
-                //     };
-                //     instance.loginRedirect(signUpSignInFlowRequest);
-                // }
+                if (compareIssuingPolicy(event.payload.idTokenClaims, b2cPolicies.names.forgotPassword)) {
+                    const signUpSignInFlowRequest = {
+                        authority: b2cPolicies.authorities.signUpSignIn.authority,
+                    };
+                    instance.loginRedirect(signUpSignInFlowRequest).catch((error) => {
+                        console.error('Login Redirect Error:', error);
+                    });
+                }
             }
-
-            // if (event.eventType === EventType.LOGIN_FAILURE) {
-            //     if (event.error && event.error.errorMessage.includes('AADB2C90118')) {
-            //         const resetPasswordRequest = {
-            //             authority: b2cPolicies.authorities.forgotPassword.authority,
-            //             scopes: [],
-            //         };
-            //         instance.loginRedirect(resetPasswordRequest);
-            //     }
-            // }
         });
 
         return () => {
@@ -73,6 +53,24 @@ const Pages = () => {
 };
 
 const App = ({ Component, pageProps }) => {
+    const [isMsalInitialized, setIsMsalInitialized] = useState(false);
+
+    useEffect(() => {
+        const initializeMsal = async () => {
+            try {
+                await msalInstance.initialize(); // Initialize the MSAL instance
+                setIsMsalInitialized(true);
+            } catch (error) {
+                console.error('MSAL Initialization Error:', error);
+            }
+        };
+
+        initializeMsal();
+    }, []);
+
+    if (!isMsalInitialized) {
+        return <div>Loading...</div>; // Show a loading state until MSAL is initialized
+    }
 
     return (
         <MsalProvider instance={msalInstance}>
