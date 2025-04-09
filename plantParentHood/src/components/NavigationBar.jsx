@@ -39,37 +39,40 @@ export const Navigationbar = () => { // Accept `user` as a prop
     };
     return (
         <>
-            <Navbar  variant="dark" className="navbarStyle">
-                <Link className="navbar-brand" href="/">
-                   plantsparenthood
+            <Navbar variant="dark" className="navbarStyle px-3">
+                <Link className="navbar-brand fw-bold text-uppercase" href="/">
+                    PlantsParenthood
                 </Link>
                 <AuthenticatedTemplate>
-                    <Nav.Link className="navbarButton" href="/">
-                        Home
-                    </Nav.Link>
-                    <div className="collapse navbar-collapse justify-content-end">
-                        <Button variant="info" onClick={handleProfileEdit} className="profileButton">
+                    <div className="d-flex align-items-center">
+                        <Button
+                            variant="outline-info"
+                            onClick={handleProfileEdit}
+                            className="me-2 profileButton"
+                        >
                             Edit Profile
                         </Button>
-
                         <DropdownButton
                             variant="warning"
                             drop="start"
                             title={userName()}
+                            className="profileDropdown"
                         >
                             <Dropdown.Item as="button" onClick={handleLogoutRedirect}>
-                                Sign out using Redirect
+                                Sign out
                             </Dropdown.Item>
                         </DropdownButton>
                     </div>
                 </AuthenticatedTemplate>
                 <UnauthenticatedTemplate>
-                    <div className="collapse navbar-collapse justify-content-end">
-                        <DropdownButton variant="secondary" className="ml-auto" drop="start" title="Sign In">
-                            <Dropdown.Item as="button" onClick={handleLoginRedirect}>
-                                Sign in using Redirect
-                            </Dropdown.Item>
-                        </DropdownButton>
+                    <div className="ms-auto">
+                        <Button
+                            variant="secondary"
+                            onClick={handleLoginRedirect}
+                            className="signinButton"
+                        >
+                            Sign In
+                        </Button>
                     </div>
                 </UnauthenticatedTemplate>
             </Navbar>
