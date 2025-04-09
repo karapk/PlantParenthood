@@ -1,10 +1,10 @@
 import Footer from "./Footer";
 import {Navigationbar} from "./NavigationBar";
 
-const Layout = ({ children, setShowLogin, user }) => {  
+const Layout = ({ children, setShowLogin, userName }) => {  
     return (
         <div>
-            <Navigationbar setShowLogin={setShowLogin} user={user} /> 
+            <Navigationbar  /> 
             <main>{children}</main>
             <Footer />
         </div>
