@@ -15,7 +15,7 @@ export const b2cPolicies = {
         // signUpSignIn: 'B2C_1_SignUpIn',
         signUpSignIn: 'B2C_1_signupsignin1', 
         // forgotPassword: 'B2C_1_TRS_Password_Reset',
-        editProfile: 'B2C_1_Edit_Profile',
+        editProfile: 'B2C_1_profileediting0',
     },
     authorities: {
         signUpSignIn: {
@@ -25,7 +25,7 @@ export const b2cPolicies = {
             // authority: 'https://plantsparenthood.b2clogin.com/plantsparenthood.onmicrosoft.com/B2C_1_Reset',
         // },
         editProfile: {
-            authority: 'https://plantsparenthood.b2clogin.com/plantsparenthood.onmicrosoft.com/B2C_1_Edit_Profile'
+            authority: 'https://plantsparenthood.b2clogin.com/plantsparenthood.onmicrosoft.com/B2C_1_profileediting0'
         },
     },
     // authorityDomain: 'https://uvokmigration.b2clogin.com/uvokmigration.onmicrosoft.com'
