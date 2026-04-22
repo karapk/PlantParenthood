@@ -3,8 +3,6 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
 
-const JWT_SECRET = "550250";  // Hardcoded secret key
-
 export default async function handler(req, res) {
     if (req.method === 'POST') {
         const { email, password } = req.body;
@@ -22,7 +20,7 @@ export default async function handler(req, res) {
                 return res.status(401).json({ error: 'Invalid credentials' });
             }
 
-            const token = jwt.sign({ userId: user.id }, JWT_SECRET, { expiresIn: '1h' });
+            const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
             res.status(200).json({ token });
         } catch (error) {
