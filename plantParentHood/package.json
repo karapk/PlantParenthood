@@ -23,7 +23,7 @@
     "bootstrap": "^5.3.3",
     "jquery": "^3.7.1",
     "jsonwebtoken": "^9.0.2",
-    "next": "^15.2.4",
+    "next": "^15.3.9",
     "npm": "^10.8.2",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.9",
@@ -48,7 +48,7 @@
     "vitest": "^4.1.5"
   },
   "engines": {
-    "node": ">=20.19.0"
+    "node": "20.x"
   },
   "prisma": {
     "seed": "node ./prisma/seed.js"
