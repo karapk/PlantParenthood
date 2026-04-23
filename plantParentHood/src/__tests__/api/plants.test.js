@@ -10,6 +10,15 @@ vi.mock('@/server/prisma', () => ({
   },
 }));
 
+// env config must be mocked before the handler is imported so requireEnv does not throw
+vi.mock('@/config/env', () => ({
+  env: {
+    databaseUrl: 'file:./test.db',
+    jwtSecret: 'test-secret',
+    trefleApiKey: 'test-trefle-key',
+  },
+}));
+
 import prisma from '@/server/prisma';
 
 // --- helpers ---
@@ -38,10 +47,9 @@ describe('GET /api/plants', () => {
       { id: 2, name: 'Fern', isOutdoor: false },
     ];
     prisma.plants.findMany.mockResolvedValue(mockPlants);
+    const res = makeRes();
 
     // Act
-    await handler(makeReq('GET', {}), makeRes());
-    const res = makeRes();
     await handler(makeReq('GET', {}), res);
 
     // Assert
@@ -78,6 +86,18 @@ describe('GET /api/plants', () => {
     expect(prisma.plants.findMany).toHaveBeenCalledWith({ where: { isOutdoor: true } });
     expect(res.status).toHaveBeenCalledWith(200);
     expect(res.json).toHaveBeenCalledWith(mockOutdoorPlants);
+  });
+
+  it('returns 400 for an unsupported type value', async () => {
+    // Arrange
+    const res = makeRes();
+
+    // Act
+    await handler(makeReq('GET', { type: 'balcony' }), res);
+
+    // Assert
+    expect(res.status).toHaveBeenCalledWith(400);
+    expect(prisma.plants.findMany).not.toHaveBeenCalled();
   });
 
   it('returns 405 for non-GET requests', async () => {

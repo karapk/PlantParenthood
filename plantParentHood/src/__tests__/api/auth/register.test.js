@@ -2,6 +2,14 @@ import { describe, it, expect, vi, beforeEach } from 'vitest';
 import handler from '@/pages/api/auth/register';
 
 // --- mocks ---
+vi.mock('@/config/env', () => ({
+  env: {
+    databaseUrl: 'file:./test.db',
+    jwtSecret: 'test-secret',
+    trefleApiKey: 'test-trefle-key',
+  },
+}));
+
 vi.mock('@/server/prisma', () => ({
   default: {
     user: {
