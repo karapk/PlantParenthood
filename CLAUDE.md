@@ -152,6 +152,24 @@ Azure B2C values belong in `.env.local` once that integration is completed.
 - Reset mocks in `beforeEach` with `vi.clearAllMocks()`
 - Run tests before every commit: `npm test`
 
+## Pull Request Review Workflow
+
+Every PR must go through this cycle before merging:
+
+1. Open the PR and wait for CI to pass and Copilot to post its review
+2. Read every review comment — do not dismiss or ignore any
+3. For each comment, either:
+   - **Fix it** — make the code change, commit it to the branch, then reply to the comment explaining what was done and reference the commit SHA
+   - **Decline it** — reply with a clear reason why the suggestion was not applied
+4. Every comment must receive a reply before the PR is merged — no unresponded threads
+5. After all comments are addressed, request a re-review if changes were substantial
+
+**Reply format for resolved comments:**
+> Resolved. [One sentence describing what changed and why.] Commit: `<sha>`.
+
+**Reply format for declined comments:**
+> Not applied. [Reason — e.g. "this pattern is intentional because X" or "addressed differently via Y"].
+
 ## Before Finishing a Task
 
 - [ ] `npm run lint` passes with no errors
