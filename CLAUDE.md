@@ -163,6 +163,8 @@ Every PR must go through this cycle before merging:
    - **Decline it** — reply with a clear reason why the suggestion was not applied
 4. Every comment must receive a reply before the PR is merged — no unresponded threads
 5. After all comments are addressed, request a re-review if changes were substantial
+6. Once the user approves, merge the PR and delete the remote branch
+7. Update `CHANGELOG.md` — move the entry from `[Unreleased]` to the merged date and mark status as **Merged**
 
 **Reply format for resolved comments:**
 > Resolved. [One sentence describing what changed and why.] Commit: `<sha>`.
