@@ -97,19 +97,18 @@ Always import Prisma from `@/server/prisma` (singleton), never instantiate `new 
 - No hardcoded secrets, API keys, or credentials in source files — use `.env.local`
 - Keep API route handlers thin — move logic to a service function if it grows beyond ~40 lines
 
-## Known Issues to Fix (Refactor Targets)
+## Refactor Checklist
 
-These are the main things to address during refactoring:
-
-1. **Hardcoded JWT secret** in `src/pages/api/auth/login.js` (`"550250"`) → move to `JWT_SECRET` env var
-2. **Hardcoded Trefle API key** in `src/pages/api/plantnet.js` → move to `TREFLE_API_KEY` env var
-3. **`/api/plants` returns hardcoded data** instead of querying Prisma → replace with a DB query
-4. **`contactUS` API** only `console.log`s — no email sending implemented
-5. **Indoor page** is a stub/template with no real data
-6. **Azure B2C / MSAL** integration is incomplete — `authConfig.js` and MSAL libraries installed but not wired up
-7. **bcrypt and bcryptjs both installed** — consolidate on one (prefer `bcryptjs` for pure-JS compatibility with Next.js edge)
-8. **No tests** — add a testing framework (Vitest + React Testing Library recommended for Next.js)
-9. **Mixed Tailwind + Bootstrap** — decide on one or document which to use where
+- [x] **Hardcoded JWT secret** — moved to `JWT_SECRET` env var via `src/config/env.js`
+- [x] **Hardcoded Trefle API key** — moved to `TREFLE_API_KEY` env var via `src/config/env.js`
+- [x] **`/api/plants` returns hardcoded data** — replaced with live Prisma query + `?type` filter
+- [x] **`/api/auth/register` has no input validation** — added email format, password length, 409 on duplicate
+- [x] **bcrypt and bcryptjs both installed** — removed `bcrypt`, consolidated on `bcryptjs`
+- [x] **No tests** — Vitest + React Testing Library set up, 15 tests passing
+- [ ] **`contactUS` API** only `console.log`s — no email sending implemented ← **next**
+- [ ] **Indoor page** is a stub/template with no real data
+- [ ] **Azure B2C / MSAL** integration is incomplete — `authConfig.js` and MSAL libraries installed but not wired up
+- [ ] **Mixed Tailwind + Bootstrap** — decide on one or document which to use where
 
 ## Environment Variables
 
