@@ -9,7 +9,7 @@ Follow these conventions when performing any git or GitHub operations in this pr
   - Good: `feat/add-agents`, `fix/auth-validation`, `refactor/remove-msal`
   - Bad: `feat/add-claude-agents`, `feat/copilot-refactor`
   - Do NOT label branches as tool-specific (e.g. "claude", "copilot", "codex") unless explicitly instructed.
-- Use the prefix that matches the change type:
+- Use the prefix that matches the change type — these mirror the Conventional Commits types already used for commit messages in `CLAUDE.md`:
   - `feat/` — new feature or capability
   - `fix/` — bug fix
   - `refactor/` — code restructure without behavior change
@@ -36,11 +36,7 @@ Follow Conventional Commits as defined in `CLAUDE.md`:
 
 1. Push the branch: `git push -u origin <branch>`
 2. Create the PR: `gh pr create --title "..." --body "..."`
-3. After the PR is created, request a Copilot code review by posting a comment on the PR:
-   ```
-   gh pr comment <pr-number> --body "@github-copilot review"
-   ```
-   Note: Copilot cannot be added as a reviewer directly because it is not a repository collaborator. Use the comment trigger instead.
+3. The CI pipeline will automatically post `@github-copilot review` as a PR comment via `.github/workflows/copilot-review.yml`, triggering the Copilot review. No manual step needed.
 4. Wait for CI checks and the Copilot review before merging.
 5. Address all review comments before merging (see PR review workflow in `CLAUDE.md`).
 
