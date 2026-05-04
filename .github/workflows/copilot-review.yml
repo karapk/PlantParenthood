@@ -16,9 +16,9 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            await github.rest.pulls.requestReviewers({
+            await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              pull_number: context.payload.pull_request.number,
-              reviewers: ['copilot-pull-request-reviewer'],
+              issue_number: context.payload.pull_request.number,
+              body: '@github-copilot review',
             });
