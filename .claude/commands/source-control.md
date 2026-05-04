@@ -32,6 +32,18 @@ Follow Conventional Commits as defined in `CLAUDE.md`:
 - Never push directly to `main`
 - Delete the remote branch after merging
 
+### Workflow
+
+1. Push the branch: `git push -u origin <branch>`
+2. Create the PR: `gh pr create --title "..." --body "..."`
+3. After the PR is created, request a Copilot code review by posting a comment on the PR:
+   ```
+   gh pr comment <pr-number> --body "@github-copilot review"
+   ```
+   Note: Copilot cannot be added as a reviewer directly because it is not a repository collaborator. Use the comment trigger instead.
+4. Wait for CI checks and the Copilot review before merging.
+5. Address all review comments before merging (see PR review workflow in `CLAUDE.md`).
+
 ## What NOT to do
 
 - Never force-push unless explicitly asked
