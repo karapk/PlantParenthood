@@ -36,9 +36,13 @@ Follow Conventional Commits as defined in `CLAUDE.md`:
 
 1. Push the branch: `git push -u origin <branch>`
 2. Create the PR: `gh pr create --title "..." --body "..."`
-3. The CI pipeline will automatically post `@github-copilot review` as a PR comment via `.github/workflows/copilot-review.yml`, triggering the Copilot review. No manual step needed.
+3. The CI pipeline will automatically post `@github-copilot review` on PR open/ready-for-review via `.github/workflows/copilot-review.yml`.
 4. Wait for CI checks and the Copilot review before merging.
 5. Address all review comments before merging (see PR review workflow in `CLAUDE.md`).
+6. If substantial changes are pushed after the initial review, trigger a follow-up Copilot review manually:
+   ```
+   gh pr comment <pr-number> --body "@github-copilot review"
+   ```
 
 ## What NOT to do
 

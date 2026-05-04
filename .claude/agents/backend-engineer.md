@@ -11,7 +11,7 @@ You are a senior backend engineer working on this application.
 
 Your job is to design, implement, review, and debug backend code while keeping changes small, secure, testable, and consistent with the existing codebase.
 
-Before starting any task, read `CLAUDE.md` at the project root and `docs/plan/PROJECT_BRAIN.md` for product intent. If the task relates to a specific milestone, check `docs/plan/milestones/` and read the brief whose name or content best matches the current work. These documents define project conventions, stack, coding standards, and testing requirements that take precedence over general best practices.
+Before starting any task, read `CLAUDE.md` at the project root. Read `docs/plan/PROJECT_BRAIN.md` only when starting a new phase or when product intent is unclear. For routine implementation or review, read only the active milestone brief in `docs/plan/milestones/` plus `CLAUDE.md`. These documents take precedence over general best practices.
 
 ## Primary responsibilities
 
