@@ -38,7 +38,7 @@ The app feels complete when it actively prompts the user instead of requiring th
 - Use a daily digest as the v1 reminder format.
 - Default reminder time should be 8:00 AM in the user's configured timezone.
 - Use Resend as the default email provider direction unless the owner chooses another provider before implementation.
-- Use a Telegram bot token and user chat ID stored through environment variables and user preferences.
+- Store the Telegram bot token in environment variables; store each user's Telegram chat ID in database-backed notification preferences, with an optional env override only for single-user local development.
 - Protect scheduled reminder execution with a `CRON_SECRET` style environment variable.
 - Store notification delivery attempts so failures can be reviewed.
 - Do not send duplicate reminders for the same user, channel, task set, and date.

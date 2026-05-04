@@ -1,15 +1,15 @@
 # Project: PlantParenthood
 
-A full-stack plant care web app built with Next.js. Users can browse indoor/outdoor plants, identify plants via the Trefle API, and manage accounts. Azure B2C auth is in-progress.
+A full-stack plant care web app built with Next.js. V1 focuses on local accounts, user-owned plant collections, care schedules, weekly plans, and reminders. External plant APIs may be used for plant-care enrichment; image-based plant identification and Azure B2C are deferred.
 
 ## Stack
 
 - **Language:** JavaScript (Next.js pages router — no TypeScript yet)
 - **Framework:** Next.js 15 (pages router), React 18
 - **Styling:** Tailwind CSS + Bootstrap 5 (both are used — prefer Tailwind for new code)
-- **ORM:** Prisma 6 with SQLite (`prisma/dev.db`)
-- **Auth:** Local JWT (bcryptjs + jsonwebtoken) + Azure B2C via MSAL (WIP)
-- **External APIs:** Trefle plant API (via `/api/plantnet`)
+- **ORM:** Prisma with SQLite (`prisma/dev.db`); package versions should be aligned in Milestone 00
+- **Auth:** Local JWT (bcryptjs + jsonwebtoken); Azure B2C/MSAL is deferred and should not be built for v1
+- **External APIs:** Trefle plant API (via `/api/plantnet`) for enrichment; image-based identification is deferred
 - **HTTP Client:** axios
 - **Package manager:** npm
 - **Testing:** Vitest + React Testing Library + jest-dom
@@ -32,7 +32,7 @@ PlantParenthood/
     │   ├── components/       ← React components
     │   ├── server/
     │   │   └── prisma.js     ← Prisma singleton (always import from here)
-    │   └── authConfig.js     ← Azure B2C / MSAL config
+    │   └── authConfig.js     ← deferred Azure B2C / MSAL config
     └── prisma/
         ├── schema.prisma
         └── seed.js
@@ -115,7 +115,7 @@ Always import Prisma from `@/server/prisma` (singleton), never instantiate `new 
 - [x] **No tests** — Vitest + React Testing Library set up, 15 tests passing
 - [ ] **`contactUS` API** only `console.log`s — no email sending implemented ← **next**
 - [ ] **Indoor page** is a stub/template with no real data
-- [ ] **Azure B2C / MSAL** integration is incomplete — `authConfig.js` and MSAL libraries installed but not wired up
+- [ ] **Azure B2C / MSAL** is deferred from v1 — preserve existing work off-main, then remove from active main path
 - [ ] **Mixed Tailwind + Bootstrap** — decide on one or document which to use where
 
 ## Environment Variables
@@ -128,14 +128,14 @@ JWT_SECRET=<strong-random-secret>
 TREFLE_API_KEY=<your-trefle-key>
 ```
 
-Azure B2C values belong in `.env.local` once that integration is completed.
+Azure B2C values are not required for v1. If Azure B2C is revived later, document its values in `.env.local` and `.env.example` at that time.
 
 ## Auth Architecture
 
 - Local auth: `POST /api/auth/register` and `POST /api/auth/login`
   - Passwords hashed with bcryptjs
   - JWT returned on login (currently 1hr expiry, secret must come from env)
-- Azure B2C: in progress — MSAL browser/react libraries are installed, config in `src/authConfig.js`
+- Azure B2C: deferred — MSAL work should not be built for v1 and should be preserved off-main before cleanup
 
 ## What NOT to Do
 
@@ -168,10 +168,11 @@ Every PR must go through this cycle before merging:
 3. For each comment, either:
    - **Fix it** — make the code change, commit it to the branch, then reply to the comment explaining what was done and reference the commit SHA
    - **Decline it** — reply with a clear reason why the suggestion was not applied
-4. Every comment must receive a reply before the PR is merged — no unresponded threads
-5. After all comments are addressed, request a re-review if changes were substantial
-6. Once the user approves, merge the PR and delete the remote branch
-7. Update `CHANGELOG.md` — move the entry from `[Unreleased]` to the merged date and mark status as **Merged**
+4. For accepted comments, apply the change, commit it, push the branch, and reply directly on the PR thread with the commit SHA
+5. Every comment must receive a reply before the PR is merged — no unresponded threads
+6. After all comments are addressed, confirm CI/Vercel checks are passing and request a re-review if changes were substantial
+7. Once the user approves and checks are clean, merge the PR and delete the remote branch
+8. Update `CHANGELOG.md` — move the entry from `[Unreleased]` to the merged date and mark status as **Merged**
 
 **Reply format for resolved comments:**
 > Resolved. [One sentence describing what changed and why.] Commit: `<sha>`.

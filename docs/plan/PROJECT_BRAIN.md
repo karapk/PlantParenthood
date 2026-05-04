@@ -75,6 +75,14 @@ Plant identification can return later as a separate milestone. For v1, the user 
 
 Every coding assignment should point to one milestone file and define acceptance criteria. Avoid giving agents broad instructions like "build reminders" without the active milestone context.
 
+## Source Control Review Flow
+
+- Work on a feature branch and keep commits scoped to one logical change.
+- When Copilot or a human reviewer leaves comments, review them one by one with the owner.
+- For accepted comments, make the change, commit it, push the branch, and reply directly on each PR thread using the resolved-comment format with the commit SHA.
+- For declined comments, reply directly on the PR thread with the reason.
+- Merge only after all review threads have a response, CI/Vercel checks are clean, and the owner approves.
+
 ## Reading Rules For Agents
 
 - Starting a new phase: read this file and the next milestone brief.
